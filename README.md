@@ -1,4 +1,4 @@
-# forum
+# Forum
 
 ---
 
@@ -9,15 +9,16 @@ Solved during fellowship in 01Founders coding school in London, July 2023
 
 ---
 
-## [Task description and audit questions](https://github.com/01-edu/public/tree/master/subjects/forum)
+# [Task description and audit questions](https://github.com/01-edu/public/tree/master/subjects/forum)
 
 ---
 
-## Demo [weWillHostSoon.com](https://weWillHostSoon.com/)
+# Demo 
+[weWillHostSoon.com](https://weWillHostSoon.com/)
 
 ---
 
-## How to run?
+# How to run?
 Docker compose:
 
 ## Natively (dev)
