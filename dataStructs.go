@@ -1,20 +1,20 @@
 package dataStructs
 
 type User struct {
-    Id   	 int
+    userID   	 int
     Name 	 string
     Email	 string
-    Password string
-    PostsIDs []int
+    Password     string
+    PostsIDs     []int
 }
 
 type Post struct {
-    id        	  int
+    postID        int
     titlePost     string
     contentPost   string
-    authorId  	  int
+    userID  	  int
     isAuthor      bool //check if the viewer is author
-    postDate      string
+    postDate      string //have a look @ the Go package "time", what data type is there for time?
     likesCount	  int
     dislikesCount int
     commentsCount int
@@ -23,22 +23,23 @@ type Post struct {
 }
 
 type Comment struct {
-    Id            int
-    PostId     	  int
-    AuthorId      int
-    Content   	  string
-    commentDate   string
-    LikesCount	  int
-    DislikesCount int
-    isAuthor      bool //check if the viewer is author
+    commentID  		int
+    postID     		int
+    userID     		int
+    commentContent   	string
+    commentDate   	string //have a look @ the Go package "time", what data type is there for time?
+    likesCount	  	int
+    dislikesCount 	int
+    isAuthor      	bool //check if the viewer is author
 }
 
 type Session struct {
-    Id 	   int
-    Token  string
-    Expire int
-    UserId int
+	sessionID    	int
+	token  		string
+        expiry   	time.Time // need to import "time"
+	userID 		int
 }
+
 
 type Error struct {
 	ErrorMessage string
