@@ -1,9 +1,9 @@
-package dataScucts
+package dataStructs
 
 type User struct {
-    Id   	int
-    Name 	string
-    Email	string
+    Id   	 int
+    Name 	 string
+    Email	 string
     Password string
 }
 
@@ -16,12 +16,12 @@ type Post struct {
     likesCount	  int
     dislikesCount int
     commentsCount int
-    categories	  []string
+    categories	  []string // one to many
     isAuthor      bool //check if the viewer is author
 }
 
 type Comment struct {
-    Id          	int
+    Id            int
     PostId     	  int
     AuthorId      int
     Content   	  string
