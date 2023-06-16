@@ -5,6 +5,7 @@ type User struct {
     Name 	 string
     Email	 string
     Password string
+    PostsIDs []int
 }
 
 type Post struct {
@@ -12,12 +13,13 @@ type Post struct {
     titlePost     string
     contentPost   string
     authorId  	  int
+    isAuthor      bool //check if the viewer is author
     postDate      string
     likesCount	  int
     dislikesCount int
     commentsCount int
     categories	  []string // one to many
-    isAuthor      bool //check if the viewer is author
+
 }
 
 type Comment struct {
@@ -36,4 +38,8 @@ type Session struct {
     Token  string
     Expire int
     UserId int
+}
+
+type Error struct {
+	ErrorMessage string
 }
