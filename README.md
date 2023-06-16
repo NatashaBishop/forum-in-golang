@@ -2,7 +2,7 @@
 
 ---
 
-Authors: [Gio](https://github.com/jgleggit), [Natalia Korba] (https://github.com/NatashaBishop)
+Authors: [Gio](https://github.com/jgleggit), [Natalia Korba](https://github.com/NatashaBishop)
 , Michael Young
 
 Solved during fellowship in 01Founders coding school in London, July 2023
