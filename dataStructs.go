@@ -38,6 +38,7 @@ type Session struct {
 	token  		string
         expiry   	time.Time // need to import "time"
 	userID 		int
+	IsAuthorized 	bool
 }
 
 
