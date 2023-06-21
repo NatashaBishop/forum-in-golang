@@ -1,7 +1,7 @@
 package dataStructs
 
 type User struct {
-    userID   	 int
+    userUUID   	 string
     Name 	 string
     Email	 string
     Password     string
@@ -9,7 +9,7 @@ type User struct {
 }
 
 type Post struct {
-    postID        int
+    postUUID        string
     titlePost     string
     contentPost   string
     userID  	  int
@@ -23,7 +23,7 @@ type Post struct {
 }
 
 type Comment struct {
-    commentID  		int
+    commentUUID  		string
     postID     		int
     userID     		int
     commentContent   	string
