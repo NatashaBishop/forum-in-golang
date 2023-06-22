@@ -9,7 +9,7 @@ type User struct {
 }
 
 type Post struct {
-    postUUID        string
+    postUUID      string
     titlePost     string
     contentPost   string
     userID  	  int
@@ -23,7 +23,7 @@ type Post struct {
 }
 
 type Comment struct {
-    commentUUID  		string
+    commentUUID  	string
     postID     		int
     userID     		int
     commentContent   	string
@@ -34,10 +34,10 @@ type Comment struct {
 }
 
 type Session struct {
-	sessionID    	int
+	sessionUUID    	int
 	token  		string
         expiry   	time.Time // need to import "time"
-	userID 		int
+	userUUID 		int
 	IsAuthorized 	bool
 }
 
