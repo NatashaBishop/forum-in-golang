@@ -34,10 +34,10 @@ type Comment struct {
 }
 
 type Session struct {
-	sessionUUID    	int
+	sessionUUID    	string
 	token  		string
         expiry   	time.Time // need to import "time"
-	userUUID 		int
+	userUUID 	string
 	IsAuthorized 	bool
 }
 
