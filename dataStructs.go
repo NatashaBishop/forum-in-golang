@@ -1,7 +1,7 @@
 package dataStructs
 
 type User struct {
-    userUUID   	 string
+    userID   	 string
     Name 	 string
     Email	 string
     Password     string
@@ -9,7 +9,7 @@ type User struct {
 }
 
 type Post struct {
-    postUUID      string
+    postID      string
     titlePost     string
     contentPost   string
     userID  	  int
@@ -23,7 +23,7 @@ type Post struct {
 }
 
 type Comment struct {
-    commentUUID  	string
+    commentID  	string
     postID     		int
     userID     		int
     commentContent   	string
@@ -34,7 +34,7 @@ type Comment struct {
 }
 
 type Session struct {
-	sessionUUID    	string
+	sessionID    	string
 	token  		string
         expiry   	time.Time // need to import "time"
 	userUUID 	string
