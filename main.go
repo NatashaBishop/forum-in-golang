@@ -7,7 +7,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	//_ "github.com/mattn/go-sqlite3" //for later, when we open DB
+	
+	"github.com/mattn/go-sqlite3"
 )
 
 func main() {
