@@ -1,0 +1,36 @@
+go.mod
+go.sum
+dataStructs.go temporary file, just to keep structs and variables we will use
+public
+├── template
+│      └── index.html
+│      └── login.html
+│      └──register.html
+│      └── header.html
+│      └── footer.html
+├── css
+│      └── index.css
+│      └── dashboard.css
+│      └── header.css
+│      └── menu.css
+├── img
+│      └── logo.png
+│      └── like.png
+│      └── dislike.png
+backend
+│      └── main.go
+│      └── server.go
+│      └── structs.go       
+│      └── sessions.go
+│      └── posts.go
+├── handlers
+│      └── user-register.go
+│      └── user-login.go
+│      └── user-logout.go
+│      └── create-post.go
+│      └── create-comment.go
+more……handlers
+         more………………
+├── database
+│      └──database.go
+│      └──forum-db.sqlite
