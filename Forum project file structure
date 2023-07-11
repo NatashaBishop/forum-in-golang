@@ -33,4 +33,4 @@ more……handlers
          more………………
 ├── database
 │      └──database.go
-│      └──forum-db.sqlite
+│      └──forum.db
