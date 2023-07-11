@@ -1,6 +1,6 @@
 package dataStructs
 
-type User struct {
+type Users struct {
     userID   	 string
     Name 	 string
     Email	 string
