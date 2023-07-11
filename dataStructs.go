@@ -1,11 +1,11 @@
 package dataStructs
 
-type Users struct {
+type User struct {
     userID   	 string
-    Name 	 string
-    Email	 string
-    Password     string
-    PostsIDs     []int
+    name 	 string
+    email	 string
+    password     string
+    postsIDs     []int
 }
 
 type Post struct {
@@ -43,5 +43,5 @@ type Session struct {
 
 
 type Error struct {
-	ErrorMessage string
+	errorMessage string
 }
