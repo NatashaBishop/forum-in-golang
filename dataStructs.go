@@ -1,7 +1,7 @@
 package dataStructs // Does this file need to be a golang package?
 
 type User struct {
-    userID   	     int // 1 - auto-imcremented by sqlite // 2 //
+    userID   	     int // 1 // 2 // auto-incremented by sqlite
     name 	     string // "Alice" // "Bob" //
     email	     string // "alice.bloggs@gmail.com" // bob.smith@yahoo.com //
     password         string // "MyPa$$word" // "mYsECR£t //
@@ -14,14 +14,19 @@ type Session struct {
     token  	     string  // The Cookie idetifier?
     expiry           time.Time // need to import "time"
     userUUID 	     string // ???
-    IsAuthorized     bool // True // ???
+    IsAuthorized     bool // True // userUUID >> userID 1 // Alice is logged-in, thus authorised to create, edit and delete their posts;
+                                                          // create, edit and delete their comments;
+							  // like and dislike posts or comments as well as remove their likes and dislikes;
+	                                                  // Anything else? For example can a user update name, email passsword or delete account?
 }
+
 type Post struct {
     postID           int // 1 // auto-incremented or decremented >= 0
-    titlePost        string // "Welcome to the Forum"
-    contentPost      string // "Hi, thanks for visiting our forum. This is the first post. We... "
+    titlePost        string // "Welcome to the Forum" // Maximum Character in titlePost !> 255
+    contentPost      string // "Hi, thanks for visiting our forum. This is the first post. We... " // Maximum Characters in post !> 1000
+    attachPost	     string // "cute-pussycat.jpg" // Uploaded image attached to post. Define file formats and maxSize [.jpg, .png, .svg, .webp] (5MB)
     userID  	     int // 1 // Alice's userID
-    isAuthor         bool // true // Boolean check if the viewer is author // Why check? Why? Can Author can edit or delete their posts?
+    isAuthor         bool // true // Boolean check if the viewer is author // Why check? Can Author edit or delete their posts?
     postDate         string? // Import "time", what data type is there for time? TBC
     likesCount	     int // 5 // auto-incremented or auto-decremented >= 0 // Can a user like a post more than once?
     dislikesCount    int // 1 // auto-incremented or auto-decremented >= 0 // Can a user both like and dislike a post?
@@ -33,13 +38,13 @@ type Post struct {
 type Category struct {
     categoryID       int // 0 // 1 // 2 // If I remeber correctly, we decided on three categories. 0 and/or 1 and/or 2. Can I select all categories for a post?
     titleCategory    string // "Sex" // "Money" // "Rock'n'Roll" // <--Please add correct titles
-    postsIDs         []int // [3, 5] // postID 3 and 5 tagged with categoryID 2 "Rock'n'Roll"  // [1] postID 1 tagged with categoryID 1 "Money"
+    postsIDs         []int // [3, 5] // postID 3 and 5 tagged with categoryID 2 "Rock'n'Roll"  // [1] // postID 1 tagged with categoryID 1 "Money"
 }
 	
 type Comment struct {
     commentID  	     int // 1 // auto-incremented or decremented >= 0
-    postID     	     int // 1 // Alice's original post which the comment is linked to
-    userID     	     int // 2 // userID 2 , Bob commented on Alice's postID 1 "Welcome to the Forum" 
+    postID     	     int // 1 // Alice's original post which the comment refers to
+    userID     	     int // 2 // userID 2 , Bob commented on Alice's postID 1 "Welcome to the Forum"
     contentComment   string // "Hi Alice, I really like your post. Can I suggest you... "
     commentDate      string // import package "time", what data type is there for time? TBC
     likesCount	     int // 0 // 1 // auto-incremented or auto-decremented >= 0 // Can a user like a comment more than once?
@@ -48,10 +53,10 @@ type Comment struct {
 }
 	
 type Error struct {
-    errorMessage     string // "The Username or Password is incorrect" // "You are now logged out" // 
+    errorMessage     string // "The Username or Password is incorrect" // "You are now logged out" // "The title of your post is too long." // etc...
 }
 
 type Log struct {
     logID	    int // 1 // 2 // auto-increment >= 1
-    logFileName	    string // "forum-log-2023-07-11.txt" // forum-log-2023-07-12.txt
+    logFileName	    string // "forum-logs-2023-07-11.txt" // forum-log-2023-07-12.txt // Logging creates a file for each day that there are logs.
 }
