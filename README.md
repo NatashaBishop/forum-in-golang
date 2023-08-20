@@ -16,16 +16,6 @@ Solved during fellowship in 01Founders coding school in London, Sept 2023
 [weWillHostSoon.com](https://weWillHostSoon.com/)
 
 ---
-# News Demo starter files
-
-Starter files for the News application built with Go. Tutorial:
-https://freshman.tech/web-development-with-go/
-
-Here's what the [completed application](https://freshman-news.herokuapp.com/)
-looks like:
-
-![demo](https://imagename.png)
-
 The code in this repo is meant to be a starting point for anyone building a simple forum application with Golang and SQL
 
 ## Prerequisites
