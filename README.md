@@ -36,6 +36,16 @@ $ git clone https://github.com/NatashaBishop/forum-in-golang
 ---
 
 # How to run?
-Docker compose:
+Docker compose: 
+
+    Build the docker image.
+        docker build -t forum .
+    Start an app container
+        docker run -dp 127.0.0.1:8080:8080 forum
+    Connect to database
+        docker exec -it <DOCKER_ID> sqlite3 forum.db
+
+The -d flag (short for --detach) runs the container in the background. The -p flag (short for --publish) creates a port mapping between the host and the container. The -p flag takes a string value in the format of HOST:CONTAINER, where HOST is the address on the host, and CONTAINER is the port on the container. The command publishes the container's port 8080 to 127.0.0.1:8080 (localhost:8080) on the host. Without the port mapping, you wouldn't be able to access the application from the host.
+DATABASE
 
 #### Run command line script: 
